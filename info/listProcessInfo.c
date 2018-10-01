@@ -75,11 +75,12 @@ asmlinkage long sys_listingCountInfo(unsigned long fCounter,unsigned long vFCoun
 		 myExecVeCounter, \
 		 myCloneCounter \
 	);*/
-	//printk("---The value of fCounter:%d\n",(int *) fCounter);
-	//printk("---The value of vFCounter:%d\n",(int *) vFCounter);
-	//printk("---The value of eCounter:%d\n",(int *) eCounter);
-	//printk("---The value of cCounter:%d\n",(int *) cCounter);
+	printk("---The value of fCounter:%d\n",(int *) fCounter);
+	printk("---The value of vFCounter:%d\n",(int *) vFCounter);
+	printk("---The value of eCounter:%d\n",(int *) eCounter);
+	printk("---The value of cCounter:%d\n",(int *) cCounter);
 	
+	/*
 	int r1=copy_to_user ((int *) fCounter, &myForkCounter, sizeof(myForkCounter));
 	int r2=copy_to_user (vFCounter, &myvForkCounter, sizeof(myvForkCounter));
 	int r3=copy_to_user ((int *) eCounter, &myExecVeCounter, sizeof(myExecVeCounter));
@@ -91,6 +92,7 @@ asmlinkage long sys_listingCountInfo(unsigned long fCounter,unsigned long vFCoun
 	printk("vFork Called:   %d\n",myvForkCounter);
 	printk("Execve Called:  %d\n",myExecVeCounter);
 	printk("Clone Called:   %d\n",myCloneCounter);
+	*/
 	return 0;
 }
 
